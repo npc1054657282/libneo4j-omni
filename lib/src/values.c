@@ -594,7 +594,7 @@ char *neo4j_string_value(neo4j_value_t value, char *buffer, size_t length)
 
 // bytes
 
-neo4j_value_t neo4j_bytes(const char *u, unsigned int n)
+neo4j_value_t neo4j_bytes(const unsigned char *u, unsigned int n)
 {
 #if UINT_MAX != UINT32_MAX
     if (n > UINT32_MAX)
@@ -628,7 +628,7 @@ unsigned int neo4j_bytes_length(neo4j_value_t value)
 }
 
 
-const char *neo4j_bytes_value(neo4j_value_t value)
+const unsigned char *neo4j_bytes_value(neo4j_value_t value)
 {
     REQUIRE(neo4j_type(value) == NEO4J_BYTES, NULL);
     return ((const struct neo4j_bytes *)&value)->bytes;
