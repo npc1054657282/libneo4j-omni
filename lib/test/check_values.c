@@ -259,7 +259,7 @@ END_TEST
 
 START_TEST (bytes_value)
 {
-    neo4j_value_t value = neo4j_bytes("UVWXYZ", 6);
+    neo4j_value_t value = neo4j_bytes((const unsigned char *)"UVWXYZ", 6);
     ck_assert(neo4j_type(value) == NEO4J_BYTES);
 
     ck_assert_int_eq(neo4j_bytes_length(value), 6);
