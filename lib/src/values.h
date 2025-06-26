@@ -98,7 +98,7 @@ struct neo4j_bytes
     uint16_t _pad1;
     uint32_t length;
     union {
-        const unsigned char *bytes;
+        const char *bytes;
         union _neo4j_value_data _pad2;
     };
 };

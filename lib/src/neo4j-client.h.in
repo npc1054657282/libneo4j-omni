@@ -873,7 +873,7 @@ char *neo4j_string_value(neo4j_value_t value, char *buffer, size_t length);
  * @return A neo4j value encoding the string.
  */
 __neo4j_const
-neo4j_value_t neo4j_bytes(const unsigned char *u, unsigned int n);
+neo4j_value_t neo4j_bytes(const char *u, unsigned int n);
 
 /**
  * Return the length of a neo4j byte sequence.
@@ -898,7 +898,7 @@ unsigned int neo4j_bytes_length(neo4j_value_t value);
  * @return A pointer to a byte sequence.
  */
 __neo4j_const
-const unsigned char *neo4j_bytes_value(neo4j_value_t value);
+const char *neo4j_bytes_value(neo4j_value_t value);
 
 
 /**
