@@ -686,7 +686,7 @@ int string_deserialize(uint32_t length, neo4j_iostream_t *stream,
 int bytes_deserialize(uint32_t length, neo4j_iostream_t *stream,
         neo4j_mpool_t *pool, neo4j_value_t *value)
 {
-    unsigned char *bytes = NULL;
+    char *bytes = NULL;
     if (length > 0)
     {
         bytes = neo4j_mpool_alloc(pool, length);
